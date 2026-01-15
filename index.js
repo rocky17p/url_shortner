@@ -21,12 +21,14 @@ const app = express();
 /* =======================
    DATABASE
 ======================= */
-const mongoUri =
-  process.env.MONGO_URI ||
-  process.env.MONGO_URL ||
-  "mongodb://127.0.0.1:27017/short-url";
+const mongoUri = process.env.MONGO_URI || process.env.MONGO_URL;
 
-connectMongodb(mongoUri);
+if (!mongoUri) {
+  console.error("❌ MONGO_URI is not defined. MongoDB not connected.");
+} else {
+  connectMongodb(mongoUri);
+}
+
 
 /* =======================
    MIDDLEWARE
