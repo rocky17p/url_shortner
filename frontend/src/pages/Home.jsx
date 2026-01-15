@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const API_BASE = 'http://localhost:8001'
+const API_BASE = import.meta.env.DEV ? 'http://localhost:8001' : ''
 
 export default function Home() {
   const [url, setUrl] = useState('')

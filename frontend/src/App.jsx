@@ -4,17 +4,18 @@ import './App.css'
 
 function App() {
   const navigate = useNavigate()
-  const [auth, setAuth] = useState({ authenticated: false, user: null })
+  const API_BASE = import.meta.env.DEV ? 'http://localhost:8001' : ''
+  const [auth, setAuth] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:8001/user/me', { credentials: 'include' })
+    fetch(`${API_BASE}/user/me`, { credentials: 'include' })
       .then(r => r.json())
       .then(setAuth)
       .catch(() => { })
   }, [])
 
   async function logout() {
-    await fetch('http://localhost:8001/user/logout', { method: 'POST', credentials: 'include' })
+    await fetch(`${API_BASE}/user/logout`, { method: 'POST', credentials: 'include' })
     setAuth({ authenticated: false, user: null })
     navigate('/login')
   }

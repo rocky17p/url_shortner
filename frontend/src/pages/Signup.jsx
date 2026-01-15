@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
-const API_BASE = 'http://localhost:8001'
+const API_BASE = import.meta.env.DEV ? 'http://localhost:8001' : ''
 
 export default function Signup() {
   const navigate = useNavigate()
