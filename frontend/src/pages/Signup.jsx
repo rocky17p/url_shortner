@@ -1,17 +1,13 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
-const API_BASE = import.meta.env.DEV ? 'http://localhost:8001' : ''
-
 export default function Signup() {
   const navigate = useNavigate()
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [formData, setFormData] = useState({ name: '', email: '', password: '' })
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  async function onSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
     setError('')
     setLoading(true)

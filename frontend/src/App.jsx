@@ -4,18 +4,17 @@ import './App.css'
 
 function App() {
   const navigate = useNavigate()
-  const API_BASE = import.meta.env.DEV ? 'http://localhost:8001' : ''
   const [auth, setAuth] = useState(null)
 
   useEffect(() => {
-    fetch(`${API_BASE}/user/me`, { credentials: 'include' })
+    fetch('/user/me', { credentials: 'include' })
       .then(r => r.json())
       .then(setAuth)
-      .catch(() => { })
+      .catch((e) => console.log("Auth fetch error", e))
   }, [])
 
   async function logout() {
-    await fetch(`${API_BASE}/user/logout`, { method: 'POST', credentials: 'include' })
+    await fetch('/user/logout', { method: 'POST', credentials: 'include' })
     setAuth({ authenticated: false, user: null })
     navigate('/login')
   }

@@ -18,7 +18,7 @@ async function handlegenerateNewShortURL(req, res) {
   });
 }
 
-async function handleall(req, res) {
+async function handleall(req, res, next) {
   const shortID = req.params.shortID;
 
   const entry = await Url.findOneAndUpdate(
@@ -34,7 +34,8 @@ async function handleall(req, res) {
   );
 
   if (!entry) {
-    return res.status(404).send("Short URL not found");
+    // If no short ID found, pass to next middleware (which will be the SPA catch-all)
+    return next();
   }
 
   return res.redirect(entry.redirectURL);

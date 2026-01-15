@@ -17,31 +17,31 @@ const __dirname = path.dirname(__filename);
 const port = process.env.PORT || 8001;
 const app = express();
 
-connectMongodb(process.env.MONGO_URL || "mongodb://127.0.0.1:27017/short-url");
+// Connect to DB using MONGO_URI (preferred) or MONGO_URL (fallback)
+const mongoUri = process.env.MONGO_URI || process.env.MONGO_URL || "mongodb://127.0.0.1:27017/short-url";
+connectMongodb(mongoUri);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Serve React frontend - static files first
+// Serve React frontend - static files first
 const clientDistPath = path.resolve(__dirname, "frontend", "dist");
 app.use(express.static(clientDistPath));
 
-app.get("/debug-deployment", (req, res) => {
-  const fs = require("fs");
-  try {
-    const rootFiles = fs.readdirSync(__dirname);
-    const distFiles = fs.existsSync(clientDistPath) ? fs.readdirSync(clientDistPath) : "MISSING";
-    res.json({
-      __dirname,
-      clientDistPath,
-      rootFiles,
-      distFiles,
-      env: process.env.NODE_ENV
-    });
-  } catch (e) {
-    res.status(500).json({ error: e.message });
-  }
+// API routes
+app.use("/url", restrictTo(["NORMAL"]), urlRoute);
+app.use("/user", userRoute);
+
+// Redirect handler for shortened URLs
+// This matches generic paths, so if it doesn't find a URL, it calls next()
+app.get("/:shortID", handleall);
+
+// Catch-all route for SPA (must be last)
+// If previous routes didn't match (API or ShortID), serve the frontend
+app.get("*", (req, res) => {
+  res.sendFile(path.join(clientDistPath, "index.html"));
 });
 
 app.listen(port, () => console.log(`server started at port ${port}`));

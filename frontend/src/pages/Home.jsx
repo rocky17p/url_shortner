@@ -1,6 +1,7 @@
+
 import { useEffect, useState } from 'react'
 
-const API_BASE = import.meta.env.DEV ? 'http://localhost:8001' : ''
+// Removed API_BASE as per instruction to use relative paths for fetch
 
 export default function Home() {
   const [url, setUrl] = useState('')
@@ -13,7 +14,7 @@ export default function Home() {
 
   async function fetchUrls() {
     try {
-      const res = await fetch(`${API_BASE}/url`, { credentials: 'include' })
+      const res = await fetch(`/ url`, { credentials: 'include' })
       const data = await res.json()
       setUrls(Array.isArray(data) ? data : [])
     } catch (e) {
@@ -23,7 +24,7 @@ export default function Home() {
 
   async function checkAuth() {
     try {
-      const res = await fetch(`${API_BASE}/user/me`, { credentials: 'include' })
+      const res = await fetch(`${API_BASE} /user/me`, { credentials: 'include' })
       const data = await res.json()
       setIsAuthenticated(data.authenticated)
     } catch (e) {
