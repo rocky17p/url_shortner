@@ -22,38 +22,26 @@ connectMongodb(process.env.MONGO_URL || "mongodb://127.0.0.1:27017/short-url");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      const allowedOrigins = [
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:5174",
-        "http://127.0.0.1:5174",
-      ];
-      // Allow requests with no origin (like mobile apps or curl requests)
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.indexOf(origin) === -1) {
-        return callback(new Error("The CORS policy for this site does not allow access from the specified Origin."), false);
-      }
-      return callback(null, true);
-    },
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
-app.use(checkforauthentication);
 
-// API routes
-app.use("/url", restrictTo(["NORMAL"]), urlRoute);
-app.use("/user", userRoute);
-
-// Redirect handler for shortened URLs
-app.get("/:shortID", handleall);
-
-// Serve React frontend - this must come LAST
+// Serve React frontend - static files first
 const clientDistPath = path.resolve(__dirname, "frontend", "dist");
 app.use(express.static(clientDistPath));
+
+app.get("/debug-deployment", (req, res) => {
+  const fs = require("fs");
+  try {
+    const rootFiles = fs.readdirSync(__dirname);
+    const distFiles = fs.existsSync(clientDistPath) ? fs.readdirSync(clientDistPath) : "MISSING";
+    res.json({
+      __dirname,
+      clientDistPath,
+      rootFiles,
+      distFiles,
+      env: process.env.NODE_ENV
+    });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
 
 app.listen(port, () => console.log(`server started at port ${port}`));
