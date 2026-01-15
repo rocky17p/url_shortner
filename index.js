@@ -21,14 +21,12 @@ const app = express();
 /* =======================
    DATABASE
 ======================= */
-const mongoUri = process.env.MONGO_URI || process.env.MONGO_URL;
+const mongoUri =
+  process.env.MONGO_URI ||
+  process.env.MONGO_URL ||
+  "mongodb://127.0.0.1:27017/short-url";
 
-if (!mongoUri) {
-  console.error("❌ MONGO_URI is not defined. MongoDB not connected.");
-} else {
-  connectMongodb(mongoUri);
-}
-
+connectMongodb(mongoUri);
 
 /* =======================
    MIDDLEWARE
@@ -67,9 +65,23 @@ app.get("/:shortID", (req, res, next) => {
 /* =======================
    SPA FALLBACK (LAST)
 ======================= */
-app.get("*", (req, res) => {
-  res.sendFile(path.join(clientDistPath, "index.html"));
+// Using middleware to avoid Express 5 wildcard issues
+app.use((req, res, next) => {
+  if (req.method === "GET") {
+    return res.sendFile(path.join(clientDistPath, "index.html"));
+  }
+  next();
 });
+
+/* =======================
+   SERVER (Local Development)
+======================= */
+if (process.env.NODE_ENV !== 'production') {
+  const port = process.env.PORT || 8001;
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
 
 /* =======================
    EXPORT FOR VERCEL
