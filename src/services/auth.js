@@ -1,5 +1,5 @@
 // service/auth.js — improved
-const jwt = require("jsonwebtoken");
+import jwt from "jsonwebtoken";
 const secret = "12";
 
 function setUser(user) {
@@ -9,6 +9,7 @@ function setUser(user) {
     { expiresIn: "6h" }
   );
 }
+
 function getUser(token) {
   try {
     return jwt.verify(token, secret);
@@ -17,7 +18,4 @@ function getUser(token) {
   }
 }
 
-module.exports = {
-  setUser,
-  getUser,
-};
+export { setUser, getUser };

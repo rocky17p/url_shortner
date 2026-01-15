@@ -1,5 +1,5 @@
-const { nanoid } = require("nanoid");
-const Url = require("../models/url");
+import { nanoid } from "nanoid";
+import Url from "../models/url.js";
 
 async function handlegenerateNewShortURL(req, res) {
   const body = req.body;
@@ -17,6 +17,7 @@ async function handlegenerateNewShortURL(req, res) {
     shortUrl: `${req.protocol}://${req.get("host")}/${shortID}`,
   });
 }
+
 async function handleall(req, res) {
   const shortID = req.params.shortID;
 
@@ -29,7 +30,7 @@ async function handleall(req, res) {
         },
       },
     },
-    { new: true } // ✅ This makes sure you get the updated document back
+    { new: true }
   );
 
   if (!entry) {
@@ -52,7 +53,8 @@ async function handleListUrls(req, res) {
   const urls = await Url.find({}).sort({ createdAt: -1 });
   return res.json(urls);
 }
-module.exports = {
+
+export {
   handlegenerateNewShortURL,
   handleall,
   handlegetanalytics,

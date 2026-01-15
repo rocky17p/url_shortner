@@ -1,5 +1,6 @@
-const { Timestamp } = require("bson");
-const mongoose = require("mongoose");
+import { Timestamp } from "bson";
+import mongoose from "mongoose";
+
 const urlSchema = new mongoose.Schema(
   {
     shortID: {
@@ -15,5 +16,6 @@ const urlSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
 const URL = mongoose.model("url", urlSchema);
-module.exports = URL;
+export default URL;

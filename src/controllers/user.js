@@ -1,6 +1,7 @@
-const User = require("../models/user");
-const { v4: uuidv4 } = require("uuid");
-const { getUser, setUser } = require("../services/auth");
+import User from "../models/user.js";
+import { v4 as uuidv4 } from "uuid";
+import { getUser, setUser } from "../services/auth.js";
+
 async function handleUserSignUp(req, res) {
   try {
     const { name, email, password } = req.body;
@@ -46,6 +47,7 @@ async function handleUserSignUp(req, res) {
     });
   }
 }
+
 async function handleUserLogin(req, res) {
   try {
     const { email, password } = req.body;
@@ -82,7 +84,8 @@ function handleLogout(req, res) {
   res.clearCookie("token");
   return res.json({ message: "Logged out" });
 }
-module.exports = {
+
+export {
   handleUserSignUp,
   handleUserLogin,
   handleMe,
