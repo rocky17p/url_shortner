@@ -3,7 +3,8 @@ import { useNavigate, Link } from 'react-router-dom'
 
 export default function Login() {
   const navigate = useNavigate()
-  const [formData, setFormData] = useState({ email: '', password: '' })
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -41,7 +42,7 @@ export default function Login() {
           <p className="muted" style={{ marginBottom: 32 }}>
             Sign in to your account to continue
           </p>
-          <form onSubmit={onSubmit} className="form-group">
+          <form onSubmit={handleSubmit} className="form-group">
             <input
               className="input"
               placeholder="Email"
