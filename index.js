@@ -40,8 +40,14 @@ app.get("/:shortID", handleall);
 
 // Catch-all route for SPA (must be last)
 // If previous routes didn't match (API or ShortID), serve the frontend
-app.get("*", (req, res) => {
-  res.sendFile(path.join(clientDistPath, "index.html"));
+// Catch-all route for SPA (must be last)
+// If previous routes didn't match (API or ShortID), serve the frontend
+// Using a middleware function to avoid regex or wildcard issues in Express 5
+app.use((req, res, next) => {
+  if (req.method === "GET") {
+    return res.sendFile(path.join(clientDistPath, "index.html"));
+  }
+  next();
 });
 
 app.listen(port, () => console.log(`server started at port ${port}`));

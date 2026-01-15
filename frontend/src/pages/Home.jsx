@@ -14,7 +14,7 @@ export default function Home() {
 
   async function fetchUrls() {
     try {
-      const res = await fetch(`/ url`, { credentials: 'include' })
+      const res = await fetch(`/url`, { credentials: 'include' })
       const data = await res.json()
       setUrls(Array.isArray(data) ? data : [])
     } catch (e) {
@@ -24,7 +24,7 @@ export default function Home() {
 
   async function checkAuth() {
     try {
-      const res = await fetch(`${API_BASE} /user/me`, { credentials: 'include' })
+      const res = await fetch(`/user/me`, { credentials: 'include' })
       const data = await res.json()
       setIsAuthenticated(data.authenticated)
     } catch (e) {
@@ -43,7 +43,7 @@ export default function Home() {
     if (!url.trim()) return
     setCreating(true)
     try {
-      const res = await fetch(`${API_BASE}/url`, {
+      const res = await fetch(`/url`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -71,7 +71,7 @@ export default function Home() {
   }
 
   async function showAnalytics(shortID) {
-    const res = await fetch(`${API_BASE}/url/analytics/${shortID}`)
+    const res = await fetch(`/url/analytics/${shortID}`)
     const data = await res.json()
     setAnalytics({ shortID, ...data })
   }
@@ -144,7 +144,7 @@ export default function Home() {
                     <td>{idx + 1}</td>
                     <td>
                       <a
-                        href={`http://localhost:8001/${u.shortID}`}
+                        href={`${window.location.origin}/${u.shortID}`}
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -153,7 +153,7 @@ export default function Home() {
                       <button
                         className="button"
                         style={{ marginLeft: 8, padding: '8px 12px', fontSize: '0.875rem' }}
-                        onClick={() => copy(`http://localhost:8001/${u.shortID}`)}
+                        onClick={() => copy(`${window.location.origin}/${u.shortID}`)}
                       >
                         Copy
                       </button>
