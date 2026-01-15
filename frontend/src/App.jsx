@@ -25,7 +25,7 @@ function App() {
         <div className="brand" onClick={() => navigate('/')}>URL Shortener</div>
         <nav className="nav">
           <Link to="/">Home</Link>
-          {auth.authenticated ? (
+          {auth?.authenticated ? (
             <>
               <span className="muted" style={{ marginLeft: 12 }}>Hi, {auth.user?.email}</span>
               <button className="button" style={{ marginLeft: 12 }} onClick={logout}>Logout</button>
