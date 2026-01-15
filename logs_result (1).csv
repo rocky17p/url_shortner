@@ -1,0 +1,210 @@
+TimeUTC,timestampInMs,requestPath,requestMethod,requestQueryString,responseStatusCode,requestId,requestUserAgent,level,environment,branch,vercelCache,type,function,host,deploymentDomain,deploymentId,durationMs,region,maxMemoryUsed,memorySize,message,projectId,traceId,sessionId,invocationId,instanceId,concurrency
+2026-01-15 19:03:06,1768503786400,url-shortner-ruby-beta.vercel.app/,GET,,500,xrtn6-1768503784831-5e9359df1402,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",error,production,main,MISS,serverless,/,url-shortner-ruby-beta.vercel.app,url-shortner-ruby-beta.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:03:04,1768503784831,url-shortner-ruby-beta.vercel.app/,GET,,500,xrtn6-1768503784831-5e9359df1402,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",,production,main,MISS,serverless,/index.js,url-shortner-ruby-beta.vercel.app,url-shortner-ruby-beta.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,981,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GMDXS3RDHTRXCBRC9B5MD,,-1
+2026-01-15 19:02:55,1768503775337,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.png,GET,,500,qtf5f-1768503774436-e71450638137,vercel-favicon/1.0,error,production,main,MISS,serverless,/favicon.png,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:54,1768503774436,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.png,GET,,500,qtf5f-1768503774436-e71450638137,vercel-favicon/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,849,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GM389M991HNAZ3WDV3454,,-1
+2026-01-15 19:02:52,1768503772391,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.png,GET,,500,88js5-1768503771438-71365f27092a,vercel-favicon/1.0,error,production,main,MISS,serverless,/favicon.png,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:51,1768503771438,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.png,GET,,500,88js5-1768503771438-71365f27092a,vercel-favicon/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,901,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GM0AK6MZ13ZKYZ4ZHQ703,,-1
+2026-01-15 19:02:50,1768503770343,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.png,GET,,500,zw2nm-1768503769411-02947b87eedf,vercel-favicon/1.0,error,production,main,MISS,serverless,/favicon.png,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:49,1768503769411,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.png,GET,,500,zw2nm-1768503769411-02947b87eedf,vercel-favicon/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,879,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKYB8H0YRCBS9T0WQGEVC,,-1
+2026-01-15 19:02:49,1768503769378,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.ico,GET,,500,nhgtz-1768503768441-9dac950e2d7a,vercel-favicon/1.0,error,production,main,MISS,serverless,/favicon.ico,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:48,1768503768441,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.ico,GET,,500,nhgtz-1768503768441-9dac950e2d7a,vercel-favicon/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,882,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKXD1HRDASFR4C7DRZXQT,,-1
+2026-01-15 19:02:46,1768503766381,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.ico,GET,,,6t6mb-1768503765500-6f26a5cbdb25,vercel-favicon/1.0,error,production,main,,serverless,,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:45,1768503765500,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.ico,GET,,,6t6mb-1768503765500-6f26a5cbdb25,vercel-favicon/1.0,,production,main,,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,830,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKTGZTC3MMVQJWZYSR13B,,-1
+2026-01-15 19:02:44,1768503764463,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.ico,GET,,500,bgg9l-1768503763568-eec45d2c9c3d,vercel-favicon/1.0,error,production,main,MISS,serverless,/favicon.ico,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:43,1768503763568,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.ico,GET,,500,bgg9l-1768503763568-eec45d2c9c3d,vercel-favicon/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,846,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKRMJ1RNXPJF98RJ1MR2P,,-1
+2026-01-15 19:02:43,1768503763458,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/,GET,,500,8kw4f-1768503762556-6e1a1816a798,vercel-favicon/1.0,error,production,main,MISS,serverless,/,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:42,1768503762556,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/,GET,,500,8kw4f-1768503762556-6e1a1816a798,vercel-favicon/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,851,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKQMYK5K0NQR3S080DHE8,,-1
+2026-01-15 19:02:41,1768503761438,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/,GET,,500,54wvj-1768503760431-353678153f42,vercel-favicon/1.0,fatal,production,main,MISS,serverless,/,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:40,1768503760431,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/,GET,,500,54wvj-1768503760431-353678153f42,vercel-favicon/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,843,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKNNSY4F4TWC4MAS9WVY5,,-1
+2026-01-15 19:02:39,1768503759367,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.ico,GET,,500,f9lrz-1768503758394-2c3c76e1d8bb,vercel-screenshot/1.0,error,production,main,MISS,serverless,/favicon.ico,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:38,1768503758394,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.ico,GET,,500,f9lrz-1768503758394-2c3c76e1d8bb,vercel-screenshot/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,900,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKKKA2RA8TG9452EDS1N2,,-1
+2026-01-15 19:02:39,1768503759311,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.ico,GET,,500,n6hct-1768503758391-021cb5e3662e,vercel-screenshot/1.0,error,production,main,MISS,serverless,/favicon.ico,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:38,1768503758391,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/favicon.ico,GET,,500,n6hct-1768503758391-021cb5e3662e,vercel-screenshot/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,864,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKKJXGN5XCJQW1FA259KM,,-1
+2026-01-15 19:02:38,1768503758198,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/,GET,,500,vs9d4-1768503757170-8e28f7762022,vercel-screenshot/1.0,error,production,main,MISS,serverless,/,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:37,1768503757170,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/,GET,,500,vs9d4-1768503757170-8e28f7762022,vercel-screenshot/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,865,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKJG4ZA8VAC1TF736XP6J,,-1
+2026-01-15 19:02:38,1768503758165,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/,GET,,500,8d54f-1768503757170-cf65ad4557f1,vercel-screenshot/1.0,error,production,main,MISS,serverless,/,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:37,1768503757170,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/,GET,,500,8d54f-1768503757170-cf65ad4557f1,vercel-screenshot/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,820,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKJG5VH9DKMPNC31RPF64,,-1
+2026-01-15 19:02:37,1768503757056,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/,GET,,500,qmp6b-1768503754694-f3963f37ba5e,vercel-screenshot/1.0,error,production,main,MISS,serverless,/,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,,,,,"[dotenv@17.2.3] injecting env (0) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (/var/task/node_modules/path-to-regexp/dist/index.js:73:19)
+    at lexer (/var/task/node_modules/path-to-regexp/dist/index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (/var/task/node_modules/path-to-regexp/dist/index.js:106:38)
+    at Iter.tryConsume (/var/task/node_modules/path-to-regexp/dist/index.js:112:28)
+    at Iter.text (/var/task/node_modules/path-to-regexp/dist/index.js:128:30)
+    at consume (/var/task/node_modules/path-to-regexp/dist/index.js:152:29)
+    at parse (/var/task/node_modules/path-to-regexp/dist/index.js:183:20)
+    at /var/task/node_modules/path-to-regexp/dist/index.js:294:74
+    at Array.map (<anonymous>)
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.",prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,,,
+2026-01-15 19:02:34,1768503754694,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app/,GET,,500,qmp6b-1768503754694-f3963f37ba5e,vercel-screenshot/1.0,,production,main,MISS,serverless,/index.js,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,url-shortner-nn0gi19d3-rishi17p-9022s-projects.vercel.app,dpl_FCRSL2nLDmUjZZQT5mn5juKVgyDw,884,iad1,-1,2048,,prj_cBNmhf88X78ZbGcrhu1TmwnTJBLn,,,01KF1GKG5EEKX5CNPE0G1CA5A3,,-1

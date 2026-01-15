@@ -17,7 +17,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = process.env.PORT || 8001;
 
 /* =======================
    DATABASE
@@ -44,7 +43,7 @@ app.use(
 );
 
 /* =======================
-   STATIC FRONTEND (MUST BE FIRST)
+   STATIC FRONTEND (FIRST)
 ======================= */
 const clientDistPath = path.resolve(__dirname, "frontend", "dist");
 app.use(express.static(clientDistPath));
@@ -57,9 +56,11 @@ app.use("/url", restrictTo(["NORMAL"]), urlRoute);
 
 /* =======================
    SHORT URL REDIRECT
-   (only if NOT a file)
 ======================= */
-app.get("/:shortID", handleall);
+app.get("/:shortID", (req, res, next) => {
+  if (req.params.shortID.includes(".")) return next();
+  handleall(req, res, next);
+});
 
 /* =======================
    SPA FALLBACK (LAST)
@@ -69,8 +70,6 @@ app.get("*", (req, res) => {
 });
 
 /* =======================
-   SERVER
+   EXPORT FOR VERCEL
 ======================= */
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+export default app;
