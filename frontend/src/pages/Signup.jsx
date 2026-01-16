@@ -24,8 +24,10 @@ export default function Signup() {
         const j = await res.json().catch(() => ({}))
         throw new Error(j.error || 'Signup failed')
       }
-      // Navigate to login page after successful signup
-      navigate('/login')
+      // Navigate to home page after successful signup (user is auto-logged in)
+      navigate('/')
+      // Force reload to update auth state
+      window.location.reload()
     } catch (e) {
       setError(e.message)
     } finally {

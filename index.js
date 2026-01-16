@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 import { connectMongodb } from "./src/config/database.js";
-import { restrictTo } from "./src/middlewares/auth.js";
+import { checkforauthentication, restrictTo } from "./src/middlewares/auth.js";
 import { handleall } from "./src/controllers/url.js";
 import urlRoute from "./src/routes/url.js";
 import userRoute from "./src/routes/user.js";
@@ -41,6 +41,9 @@ app.use(
     credentials: true,
   })
 );
+
+// Authentication middleware - checks cookies and sets req.user
+app.use(checkforauthentication);
 
 /* =======================
    STATIC FRONTEND (FIRST)
