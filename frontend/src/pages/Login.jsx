@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
-  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -23,10 +22,8 @@ export default function Login() {
         const j = await res.json().catch(() => ({}))
         throw new Error(j.error || 'Login failed')
       }
-      // Navigate to home page after successful login
-      navigate('/')
-      // Force reload to update auth state
-      window.location.reload()
+      // Redirect to home page with full reload to update auth state
+      window.location.href = '/'
     } catch (e) {
       setError(e.message)
     } finally {
