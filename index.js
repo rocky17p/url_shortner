@@ -66,17 +66,11 @@ app.get("/:shortID", (req, res, next) => {
    SPA FALLBACK (LAST)
 ======================= */
 // Using middleware to avoid Express 5 wildcard issues
-// Skip static files to prevent MIME type errors
 app.use((req, res, next) => {
-  // Skip if it's not a GET request
-  if (req.method !== "GET") return next();
-  
-  // Skip if the path has a file extension (static files)
-  const path = req.path;
-  if (path.match(/\.[a-zA-Z0-9]+$/)) return next();
-  
-  // Serve index.html for all other GET requests (SPA routes)
-  return res.sendFile(path.join(clientDistPath, "index.html"));
+  if (req.method === "GET") {
+    return res.sendFile(path.join(clientDistPath, "index.html"));
+  }
+  next();
 });
 
 /* =======================

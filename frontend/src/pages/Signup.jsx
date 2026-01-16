@@ -14,7 +14,7 @@ export default function Signup() {
     setError('')
     setLoading(true)
     try {
-      const res = await fetch('/user', {
+      const res = await fetch(`${API_BASE}/user`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -41,7 +41,7 @@ export default function Signup() {
           <p className="muted" style={{ marginBottom: 32 }}>
             Get started with your free account
           </p>
-          <form onSubmit={handleSubmit} className="form-group">
+          <form onSubmit={onSubmit} className="form-group">
             <input
               className="input"
               placeholder="Full name"
