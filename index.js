@@ -99,6 +99,14 @@ app.use((req, res, next) => {
 });
 
 /* =======================
+   404 HANDLER
+======================= */
+app.use((req, res) => {
+  console.log('404 - Not found:', req.method, req.path);
+  res.status(404).json({ error: 'Not found', path: req.path });
+});
+
+/* =======================
    SERVER (Local Development)
 ======================= */
 if (process.env.NODE_ENV !== 'production') {
