@@ -61,36 +61,18 @@ app.use("/url", restrictTo(["NORMAL"]), urlRoute);
    SHORT URL REDIRECT
 ======================= */
 app.get("/:shortID", (req, res, next) => {
-  const { shortID } = req.params;
-  
-  // Skip if it's a static file (has extension)
-  if (shortID.includes(".")) return next();
-  
-  // Skip if it's a known React Router route
-  const reactRoutes = ['login', 'signup'];
-  if (reactRoutes.includes(shortID)) return next();
-  
-  // Otherwise, treat it as a short URL
+  if (req.params.shortID.includes(".")) return next();
   handleall(req, res, next);
 });
 
 /* =======================
    SPA FALLBACK (LAST)
 ======================= */
-// Serve index.html for React Router routes, but let short URLs pass through
+// Using middleware to avoid Express 5 wildcard issues
 app.use((req, res, next) => {
-  // Only handle GET requests
-  if (req.method !== "GET") return next();
-  
-  // List of known React Router routes
-  const reactRoutes = ['/', '/login', '/signup'];
-  
-  // If it's a known React route, serve index.html
-  if (reactRoutes.includes(req.path)) {
+  if (req.method === "GET") {
     return res.sendFile(path.join(clientDistPath, "index.html"));
   }
-  
-  // For all other routes (including short URLs), pass to next handler
   next();
 });
 
@@ -108,3 +90,4 @@ if (process.env.NODE_ENV !== 'production') {
    EXPORT FOR VERCEL
 ======================= */
 export default app;
+
