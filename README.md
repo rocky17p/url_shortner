@@ -1,6 +1,6 @@
 # 🔗 URL Shortener
 
-🌐 **Live Demo:** [https://url-shortner-rishi.vercel.app](https://url-shortner-rishi.vercel.app/)
+🌐 **Live Demo:** [https://url-shortner-rishi.vercel.app](https://urlshortner.rishipatwa.me)
 
 A modern, full-stack URL shortening application built with **Node.js**, **Express 5**, **React 19**, and **MongoDB**. Features user authentication, click tracking, and a sleek responsive UI.
 
